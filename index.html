@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Envision Brand Book | 2025 Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #003087;
+  --green: #78BE21;
+  --light-gray: #D9D9D6;
+  --white: #FFFFFF;
+  --ext-dark-navy: #002855;
+  --ext-bright-blue: #41B6E6;
+  --ext-forest: #00491E;
+  --ext-goldenrod: #FFB81C;
+  --ext-terracotta: #EA733D;
+  --ext-violet: #8C4799;
+  --ext-charcoal: #53565A;
+  --ext-gray: #D9D9D6;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.6;
+  background: var(--white);
+}
+h1, h2, h3, h4, h5 { line-height: 1.1; }
+h1 { font-weight: 800; }
+h2 { font-weight: 700; font-size: 2.25rem; }
+h3 { font-weight: 700; font-size: 1.5rem; }
+h4 { font-weight: 600; font-size: 1.15rem; }
+
+/* NAV */
+.nav {
+  position: sticky; top: 0; z-index: 1000;
+  background: var(--navy);
+  padding: 0 2rem;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 72px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.nav-brand {
+  color: var(--white); font-weight: 800; font-size: 1.25rem;
+  text-decoration: none; letter-spacing: 0.04em; text-transform: uppercase;
+}
+.nav-links { display: flex; gap: 0.25rem; list-style: none; flex-wrap: wrap; }
+.nav-links a {
+  color: rgba(255,255,255,0.85); text-decoration: none;
+  font-size: 0.8rem; font-weight: 600; padding: 0.4rem 0.7rem;
+  border-radius: 4px; transition: all 0.2s; text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.12); }
+.nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; }
+.nav-toggle span { display: block; width: 24px; height: 2px; background: var(--white); margin: 5px 0; transition: 0.3s; }
+
+/* SECTIONS */
+.section { padding: 5rem 2rem; max-width: 1200px; margin: 0 auto; }
+.section-full { padding: 5rem 2rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, #001a4d 100%);
+  color: var(--white); text-align: center;
+  padding: 8rem 2rem 6rem; min-height: 60vh;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.hero h1 { font-size: 3.5rem; margin-bottom: 1rem; letter-spacing: -0.02em; }
+.hero .subtitle { font-size: 1.25rem; font-weight: 400; opacity: 0.85; margin-bottom: 2rem; }
+.hero .edition { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.25em; color: var(--green); }
+
+/* LOGO PLACEHOLDER */
+.logo-placeholder {
+  background: var(--light-gray); border: 2px dashed var(--ext-charcoal);
+  padding: 2rem; text-align: center; border-radius: 8px;
+  color: var(--ext-charcoal); font-weight: 600; font-size: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+/* SECTION HEADERS */
+.section-header {
+  text-align: center; margin-bottom: 3rem;
+}
+.section-header .section-label {
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.25em; color: var(--green); margin-bottom: 0.75rem;
+}
+.section-header h2 { color: var(--navy); margin-bottom: 1rem; }
+.section-header p { max-width: 700px; margin: 0 auto; color: #555; font-size: 1.05rem; }
+
+/* CARDS */
+.card-grid {
+  display: grid; gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+}
+.card {
+  background: var(--white); border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 2rem; border-top: 4px solid var(--navy);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.card:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(0,0,0,0.1); }
+.card h3 { color: var(--navy); margin-bottom: 0.75rem; font-size: 1.2rem; }
+.card h4 { color: var(--ext-charcoal); margin: 1rem 0 0.4rem; font-size: 0.95rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.card p, .card li { font-size: 0.92rem; color: #444; line-height: 1.6; }
+.card ul { padding-left: 1.2rem; margin: 0.5rem 0; }
+.card .tone-tag {
+  display: inline-block; background: rgba(0,48,135,0.08); color: var(--navy);
+  padding: 0.2rem 0.7rem; border-radius: 20px; font-size: 0.78rem;
+  font-weight: 600; margin: 0.5rem 0.3rem 0.5rem 0;
+}
+.card .thriving {
+  background: rgba(120,190,33,0.1); border-left: 3px solid var(--green);
+  padding: 0.75rem 1rem; margin-top: 1rem; border-radius: 0 6px 6px 0;
+  font-size: 0.9rem; color: #333;
+}
+
+/* PERSONA CARDS */
+.persona-card {
+  background: var(--white); border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 1.75rem; border-left: 4px solid var(--green);
+}
+.persona-card h3 { color: var(--navy); margin-bottom: 0.5rem; font-size: 1.1rem; }
+.persona-card h4 { color: var(--ext-charcoal); margin: 0.75rem 0 0.3rem; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; }
+.persona-card p { font-size: 0.9rem; color: #444; line-height: 1.55; }
+.persona-grid {
+  display: grid; gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* BEFORE/AFTER */
+.ba-grid { display: flex; flex-direction: column; gap: 1.5rem; }
+.ba-row {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.ba-label {
+  font-size: 0.75rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.15em; margin-bottom: 0.75rem; display: block;
+}
+.ba-before {
+  background: #f5f0f0; padding: 1.5rem 2rem;
+  border-right: 1px solid #e0d8d8;
+}
+.ba-before .ba-label { color: #b55; }
+.ba-before p { color: #666; font-size: 0.95rem; font-style: italic; }
+.ba-after {
+  background: #f0f7f0; padding: 1.5rem 2rem;
+}
+.ba-after .ba-label { color: var(--green); }
+.ba-after p { color: #333; font-size: 0.95rem; font-weight: 500; }
+.ba-context {
+  font-size: 0.8rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: var(--navy); margin-bottom: 0.25rem;
+}
+
+/* VALUES GRID */
+.values-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem; margin: 2rem 0;
+}
+.value-item {
+  background: rgba(0,48,135,0.03); border-radius: 8px;
+  padding: 1.25rem; border-left: 3px solid var(--green);
+}
+.value-item strong { color: var(--navy); }
+
+/* COLOR SWATCHES */
+.color-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.25rem; margin: 1.5rem 0;
+}
+.color-swatch {
+  border-radius: 12px; overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+.color-swatch .swatch-color { height: 100px; }
+.color-swatch .swatch-info {
+  padding: 1rem; background: var(--white);
+}
+.color-swatch .swatch-name { font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+.color-swatch .swatch-values { font-size: 0.78rem; color: #666; margin-top: 0.25rem; line-height: 1.5; }
+
+/* TYPOGRAPHY SPECS */
+.type-spec {
+  background: #fafafa; border-radius: 8px; padding: 1.5rem;
+  margin: 1rem 0; border-left: 3px solid var(--navy);
+}
+.type-spec h4 { margin-bottom: 0.25rem; }
+.type-spec p { font-size: 0.9rem; color: #555; }
+
+/* TIER SYSTEM */
+.tier-block {
+  background: var(--white); border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  padding: 2rem; margin: 1.5rem 0;
+  border-left: 4px solid var(--navy);
+}
+.tier-block.tier-2 { border-left-color: var(--green); }
+.tier-block.tier-3 { border-left-color: var(--ext-charcoal); }
+.tier-block h3 { color: var(--navy); margin-bottom: 0.5rem; }
+
+/* WORD SWAP TABLE */
+.swap-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+.swap-table th {
+  background: var(--navy); color: var(--white); padding: 0.75rem 1rem;
+  text-align: left; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+}
+.swap-table td { padding: 0.75rem 1rem; border-bottom: 1px solid #eee; font-size: 0.9rem; }
+.swap-table tr:nth-child(even) { background: #fafafa; }
+.swap-table .avoid { color: #b55; }
+.swap-table .prefer { color: var(--navy); font-weight: 600; }
+
+/* VOICE ATTRIBUTES */
+.voice-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;
+}
+.voice-is, .voice-not {
+  padding: 2rem; border-radius: 12px;
+}
+.voice-is { background: rgba(120,190,33,0.08); border: 1px solid rgba(120,190,33,0.2); }
+.voice-not { background: rgba(181,85,85,0.05); border: 1px solid rgba(181,85,85,0.15); }
+.voice-is h3 { color: var(--green); }
+.voice-not h3 { color: #b55; }
+
+/* LANGUAGE EXAMPLES */
+.lang-examples {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin: 1.5rem 0;
+}
+.lang-good, .lang-avoid {
+  padding: 1.5rem; border-radius: 10px;
+}
+.lang-good { background: rgba(120,190,33,0.06); border: 1px solid rgba(120,190,33,0.15); }
+.lang-avoid { background: rgba(181,85,85,0.04); border: 1px solid rgba(181,85,85,0.12); }
+.lang-good h4 { color: var(--green); }
+.lang-avoid h4 { color: #b55; }
+.lang-good li, .lang-avoid li { font-size: 0.9rem; margin: 0.4rem 0; }
+
+/* CONTACT / FOOTER */
+.footer {
+  background: var(--navy); color: var(--white);
+  text-align: center; padding: 5rem 2rem;
+}
+.footer h2 { color: var(--white); margin-bottom: 1rem; }
+.footer p { opacity: 0.85; max-width: 600px; margin: 0.5rem auto; }
+.footer a { color: var(--green); text-decoration: none; font-weight: 600; }
+.footer .addresses { margin: 2rem 0; font-size: 0.9rem; opacity: 0.7; }
+
+/* DIVIDERS */
+.section-divider {
+  width: 60px; height: 4px; background: var(--green);
+  border-radius: 2px; margin: 0 auto 2rem;
+}
+
+/* ALT BG */
+.bg-light { background: #f8f8f7; }
+.bg-navy { background: var(--navy); color: var(--white); }
+.bg-navy h2, .bg-navy h3, .bg-navy h4 { color: var(--white); }
+.bg-navy .section-header .section-label { color: var(--green); }
+.bg-navy .section-header p { color: rgba(255,255,255,0.75); }
+
+/* ACCESSIBLE COMBOS */
+.a11y-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem; margin: 1.5rem 0;
+}
+.a11y-combo {
+  border-radius: 8px; padding: 1.25rem; text-align: center;
+  font-weight: 700; font-size: 0.9rem;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.08);
+}
+
+/* RETIRED MARKS */
+.retired-list {
+  list-style: none; padding: 0; margin: 1rem 0;
+}
+.retired-list li {
+  padding: 0.75rem 1rem; background: rgba(181,85,85,0.05);
+  border-left: 3px solid #b55; margin: 0.5rem 0; border-radius: 0 6px 6px 0;
+  font-size: 0.92rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .nav-links { display: none; flex-direction: column; position: absolute; top: 72px; left: 0; right: 0; background: var(--navy); padding: 1rem; gap: 0; }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 0.75rem 1rem; display: block; }
+  .nav-toggle { display: block; }
+  .hero h1 { font-size: 2.25rem; }
+  .ba-row { grid-template-columns: 1fr; }
+  .voice-grid { grid-template-columns: 1fr; }
+  .lang-examples { grid-template-columns: 1fr; }
+  .card-grid { grid-template-columns: 1fr; }
+  .persona-grid { grid-template-columns: 1fr; }
+  .section { padding: 3rem 1.25rem; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.75rem; }
+  h2 { font-size: 1.75rem; }
+  .color-grid { grid-template-columns: repeat(2, 1fr); }
+  .values-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<!-- NAVIGATION -->
+<nav class="nav">
+  <a href="#hero" class="nav-brand">Envision</a>
+  <button class="nav-toggle" onclick="document.querySelector('.nav-links').classList.toggle('open')" aria-label="Toggle navigation">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links">
+    <li><a href="#our-story">Our Story</a></li>
+    <li><a href="#brand-identity">Identity</a></li>
+    <li><a href="#brand-architecture">Architecture</a></li>
+    <li><a href="#pillar-profiles">Pillars</a></li>
+    <li><a href="#audience-personas">Personas</a></li>
+    <li><a href="#brand-voice">Voice</a></li>
+    <li><a href="#brand-in-action">In Action</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="hero">
+  <!-- FLAG: LOGO PLACEHOLDER - Swap with Envision master logo from Marketing Hub repo -->
+  <div class="logo-placeholder" style="width:280px;margin-bottom:2rem;">ENVISION LOGO<br><small>Replace with master logo from Marketing Hub repo</small></div>
+  <p class="edition">2025 Edition</p>
+  <h1>Brand Book</h1>
+  <p class="subtitle">The complete guide to how Envision looks, speaks, and shows up in the world.</p>
+</header>
+
+<!-- SECTION 1: OUR STORY -->
+<section class="section" id="our-story">
+  <div class="section-header">
+    <p class="section-label">Section 1</p>
+    <h2>Our Story</h2>
+    <div class="section-divider"></div>
+  </div>
+
+  <h3 style="color:var(--navy);margin-bottom:0.5rem;">Mission</h3>
+  <p style="font-size:1.1rem;margin-bottom:2rem;">To improve the quality of life and provide inspiration for the blind or visually impaired through employment, outreach, rehabilitation, education and research.</p>
+
+  <h3 style="color:var(--navy);margin-bottom:0.5rem;">Promise</h3>
+  <p style="font-size:1.1rem;margin-bottom:2rem;">Inspiring the community, supporting caregivers, and providing a pathway to independence for the blind or visually impaired through a continuum of opportunities so they can thrive.</p>
+
+  <h3 style="color:var(--navy);margin-bottom:1rem;">Core Values</h3>
+  <div class="values-grid">
+    <div class="value-item"><strong>Integrity</strong><br>We do what's right, always.</div>
+    <div class="value-item"><strong>Curiosity</strong><br>We ask questions, seek solutions, and never stop learning.</div>
+    <div class="value-item"><strong>Passion</strong><br>We care deeply about our mission and the people we serve.</div>
+    <div class="value-item"><strong>Initiative</strong><br>We take action and lead with purpose.</div>
+    <div class="value-item"><strong>Teamwork</strong><br>We're stronger together.</div>
+    <div class="value-item"><strong>Excellence</strong><br>We set the bar high and exceed expectations.</div>
+  </div>
+
+  <h3 style="color:var(--navy);margin:2rem 0 0.75rem;">History</h3>
+  <p style="margin-bottom:1rem;">Envision's story began in 1933 with a simple yet powerful mission: to create opportunities for people who are blind or visually impaired to thrive. What began as a small workshop in Wichita has evolved into a movement that empowers individuals to unlock their full potential.</p>
+  <p style="margin-bottom:1rem;">From crafting brooms and pillowcases to pioneering research, education, and workforce development, Envision has continually evolved to meet the needs of the community we serve.</p>
+  <p style="margin-bottom:1rem;">Throughout the years, we've overcome challenges, sparked innovation, and broadened our impact to help those who are blind or visually impaired live with independence, purpose, and the opportunity to thrive.</p>
+  <p style="margin-bottom:1rem;">Today, we are a leader in creating life-changing solutions, offering a range of services that include rehabilitation, early childhood education, professional job opportunities, business solutions, and groundbreaking research.</p>
+  <p style="margin-bottom:2rem;">We're not just building a brighter future — we're helping people thrive every step of the way.</p>
+
+  <h3 style="color:var(--navy);margin-bottom:0.75rem;">Our Brand</h3>
+  <p style="margin-bottom:1rem;">Everything Envision does connects to one idea: Thriving.</p>
+  <p style="margin-bottom:1rem;">Not surviving. Not managing. Thriving — with the right tools, the right support, and the right opportunities at every stage of life.</p>
+  <p style="margin-bottom:2rem;">That idea shapes how we communicate, what we build, and who we show up for. It's the through-line from our earliest childhood programs to our most advanced research. From the factory floor to the arts gallery. From a first rehabilitation appointment to a first paycheck.</p>
+
+  <h3 style="color:var(--navy);margin-bottom:0.75rem;">Our Why</h3>
+  <p style="margin-bottom:2rem;">We believe that when people who are blind or low vision have access to personalized solutions — in employment, education, rehabilitation, and community — everyone benefits. Healthier individuals. Stronger families. Thriving organizations.</p>
+
+  <h3 style="color:var(--navy);margin-bottom:0.75rem;">Our Elevator Pitch</h3>
+  <p style="font-size:1.05rem;font-style:italic;border-left:3px solid var(--green);padding-left:1.25rem;">We are dedicated to providing personalized solutions for people who are blind or low vision — enriching their lives through employment, outreach, rehabilitation, education, and research — so they can thrive.</p>
+</section>
+
+<!-- SECTION 2: BRAND IDENTITY -->
+<section class="section-full bg-light" id="brand-identity">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">Section 2</p>
+      <h2>Brand Identity</h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <!-- Logo -->
+    <h3 style="color:var(--navy);margin-bottom:0.75rem;">Logo Guidelines</h3>
+    <p style="margin-bottom:1rem;">Our logo represents the identity of our organization — it's how people recognize and connect with who we are. Approach the logo with care and consistency in every application.</p>
+
+    <h4 style="color:var(--navy);margin:1.5rem 0 0.5rem;">Preferred Logo</h4>
+    <p style="margin-bottom:0.75rem;">Use the horizontal Envision master logo for most applications. Always default to this version unless space or design constraints require a variation.</p>
+    <!-- FLAG: LOGO PLACEHOLDER - Replace with horizontal master logo -->
+    <div class="logo-placeholder">PREFERRED LOGO (Horizontal Master)<br><small>Replace with asset from Marketing Hub repo</small></div>
+
+    <h4 style="color:var(--navy);margin:1.5rem 0 0.5rem;">Variations</h4>
+    <p style="margin-bottom:0.75rem;">Horizontal, vertical, and icon-only options are available. Use variations only when the preferred logo cannot be accommodated.</p>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;">
+      <!-- FLAG: LOGO PLACEHOLDERS - Replace with actual logo variations -->
+      <div class="logo-placeholder">Horizontal<br><small>Marketing Hub</small></div>
+      <div class="logo-placeholder">Vertical<br><small>Marketing Hub</small></div>
+      <div class="logo-placeholder">Icon Only<br><small>Marketing Hub</small></div>
+    </div>
+
+    <h4 style="color:var(--navy);margin:1.5rem 0 0.5rem;">Clear Space</h4>
+    <p style="margin-bottom:0.75rem;">Always leave breathing room around the logo — at least the height of the 'E' in Envision on all sides.</p>
+    <!-- FLAG: LOGO PLACEHOLDER - Replace with clear space diagram -->
+    <div class="logo-placeholder">CLEAR SPACE DIAGRAM<br><small>Replace with asset from Marketing Hub repo</small></div>
+
+    <h4 style="color:var(--navy);margin:1.5rem 0 0.5rem;">Incorrect Logo Usage — Never Do This</h4>
+    <div class="values-grid" style="margin-top:0.5rem;">
+      <div class="value-item" style="border-left-color:#b55;">Don't rotate the logo.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't stretch the logo disproportionately.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't alter the logo colors.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't add effects, shadows, or outlines.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't use the logo over a distracting background.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't alter the internal spacing of the logo.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't alter the proportions of the logo components.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't rearrange the components of the logo.</div>
+      <div class="value-item" style="border-left-color:#b55;">Don't re-create the logo with a different typeface.</div>
+    </div>
+
+    <!-- Typography -->
+    <h3 style="color:var(--navy);margin:3rem 0 0.75rem;">Typography</h3>
+    <p style="margin-bottom:1.5rem;">Envision uses three typefaces in brand communications. Each has a specific role and should not be substituted.</p>
+
+    <div class="type-spec">
+      <h4>Gotham — Primary</h4>
+      <p>Our primary typeface. Used for headlines and body copy in print and designed materials. Packed with confidence and clarity.</p>
+    </div>
+    <div class="type-spec" style="border-left-color:var(--green);">
+      <h4>Montserrat — Web</h4>
+      <p>Our web typeface. Used for headlines and body copy in all digital and HTML formats. Freely available via Google Fonts.</p>
+    </div>
+    <div class="type-spec" style="border-left-color:var(--ext-charcoal);">
+      <h4>Humanist — Logo Only</h4>
+      <p>Reserved for the logo only. Not for everyday use. Reserving this font exclusively for the logo strengthens brand identity and keeps the logo distinct.</p>
+    </div>
+
+    <h4 style="color:var(--navy);margin:2rem 0 1rem;">Typography Specs</h4>
+    <div class="values-grid">
+      <div class="value-item"><strong>Headlines</strong><br>Gotham or Montserrat Bold or Black. Title case. Leading 110%. Tracking -0.045em.</div>
+      <div class="value-item"><strong>Subheads (large)</strong><br>Montserrat Bold, uppercase. Leading 100-110%. Tracking 0.5em.</div>
+      <div class="value-item"><strong>Subheads (small)</strong><br>Montserrat Bold. Leading 100-110%. Tracking -0.02em.</div>
+      <div class="value-item"><strong>Body copy</strong><br>Gotham Book or Montserrat Regular. Leading 140-160%. Tracking 0 to -0.02em.</div>
+      <div class="value-item"><strong>Buttons</strong><br>Montserrat Bold, uppercase. Leading 100-110%. Tracking 0.25em.</div>
+    </div>
+
+    <!-- Colors -->
+    <h3 style="color:var(--navy);margin:3rem 0 0.75rem;">Brand Colors</h3>
+    <p style="margin-bottom:1.5rem;">Our colors are bold, vibrant, and full of life — just like the people we serve.</p>
+
+    <h4 style="color:var(--navy);margin-bottom:1rem;">Primary Colors</h4>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#003087;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Blue</div>
+          <div class="swatch-values">PMS 287C<br>Hex #003087<br>RGB 0 | 48 | 135<br>CMYK 100 | 81 | 0 | 23</div>
+        </div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#78BE21;"></div>
+        <div class="swatch-info">
+          <div class="swatch-name">Green</div>
+          <div class="swatch-values">PMS 368C<br>Hex #78BE21<br>RGB 120 | 190 | 33<br>CMYK 54 | 0 | 100 | 0</div>
+        </div>
+      </div>
+    </div>
+
+    <h4 style="color:var(--navy);margin:2rem 0 1rem;">Extended Palette</h4>
+    <div class="color-grid">
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#002855;"></div>
+        <div class="swatch-info"><div class="swatch-name">Navy</div><div class="swatch-values">PMS 295C | Hex #002855<br>RGB 0 | 40 | 85 | CMYK 100 | 63 | 0 | 67</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#41B6E6;"></div>
+        <div class="swatch-info"><div class="swatch-name">Bright Blue</div><div class="swatch-values">PMS 298C | Hex #41B6E6<br>RGB 65 | 182 | 230 | CMYK 63 | 3 | 0 | 0</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#00491E;"></div>
+        <div class="swatch-info"><div class="swatch-name">Forest Green</div><div class="swatch-values">PMS 3537C | Hex #00491E<br>RGB 0 | 73 | 30 | CMYK 100 | 0 | 100 | 69</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#FFB81C;"></div>
+        <div class="swatch-info"><div class="swatch-name">Goldenrod</div><div class="swatch-values">PMS 1235C | Hex #FFB81C<br>RGB 255 | 184 | 28 | CMYK 0 | 25 | 94 | 0</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#EA733D;"></div>
+        <div class="swatch-info"><div class="swatch-name">Terracotta</div><div class="swatch-values">PMS 4012C | Hex #EA733D<br>RGB 234 | 115 | 61 | CMYK 0 | 64 | 80 | 0</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#8C4799;"></div>
+        <div class="swatch-info"><div class="swatch-name">Violet</div><div class="swatch-values">PMS 258C | Hex #8C4799<br>RGB 140 | 71 | 153 | CMYK 51 | 84 | 0 | 0</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#53565A;"></div>
+        <div class="swatch-info"><div class="swatch-name">Charcoal</div><div class="swatch-values">PMS Cool Gray 11C | Hex #53565A<br>RGB 83 | 86 | 90 | CMYK 63 | 52 | 44 | 33</div></div>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch-color" style="background:#D9D9D6;"></div>
+        <div class="swatch-info"><div class="swatch-name">Gray</div><div class="swatch-values">PMS Cool Gray 1C | Hex #D9D9D6<br>RGB 217 | 217 | 214 | CMYK 10 | 7 | 5 | 0</div></div>
+      </div>
+    </div>
+
+    <!-- Accessible Combos -->
+    <h4 style="color:var(--navy);margin:2rem 0 0.75rem;">Accessible Color Combinations</h4>
+    <p style="margin-bottom:1rem;">These color combinations meet or exceed WCAG 2.1 AA standards (4.5:1 contrast ratio). Only use approved combinations when layering text or icons on color backgrounds.</p>
+    <!-- FLAG: Review these combos against the brand asset library chart -->
+    <div class="a11y-grid">
+      <div class="a11y-combo" style="background:#003087;color:#FFFFFF;">White on Blue — AA Pass</div>
+      <div class="a11y-combo" style="background:#002855;color:#FFFFFF;">White on Navy — AA Pass</div>
+      <div class="a11y-combo" style="background:#FFFFFF;color:#003087;border:1px solid #eee;">Blue on White — AA Pass</div>
+      <div class="a11y-combo" style="background:#FFFFFF;color:#002855;border:1px solid #eee;">Navy on White — AA Pass</div>
+      <div class="a11y-combo" style="background:#003087;color:#78BE21;">Green on Blue — AA Pass</div>
+      <div class="a11y-combo" style="background:#FFFFFF;color:#53565A;border:1px solid #eee;">Charcoal on White — AA Pass</div>
+      <div class="a11y-combo" style="background:#002855;color:#78BE21;">Green on Navy — AA Pass</div>
+      <div class="a11y-combo" style="background:#FFFFFF;color:#00491E;border:1px solid #eee;">Forest on White — AA Pass</div>
+    </div>
+
+    <!-- Imagery -->
+    <h3 style="color:var(--navy);margin:3rem 0 0.75rem;">Imagery</h3>
+
+    <h4 style="color:var(--navy);margin:1rem 0 0.5rem;">Style</h4>
+    <p style="margin-bottom:1rem;">Use candid, natural photography that reflects the diversity and vibrancy of the people Envision serves. Avoid staged or stock photography that feels generic.</p>
+
+    <h4 style="color:var(--navy);margin:1rem 0 0.5rem;">Tone</h4>
+    <p style="margin-bottom:1rem;">Empowering and optimistic, with a focus on storytelling. Highlight moments of connection, achievement, and community.</p>
+
+    <h4 style="color:var(--navy);margin:1rem 0 0.5rem;">Application</h4>
+    <p>Include photos of individuals in action — working, learning, creating — and group interactions that feel authentic and relatable. Use creative depth of field to draw attention to the subject. Never use imagery that frames people with vision loss as passive, pitied, or defined by their disability.</p>
+  </div>
+</section>
+
+<!-- SECTION 3: BRAND ARCHITECTURE -->
+<section class="section" id="brand-architecture">
+  <div class="section-header">
+    <p class="section-label">Section 3</p>
+    <h2>Brand Architecture</h2>
+    <div class="section-divider"></div>
+    <p>One Brand. Clear Identifiers.</p>
+  </div>
+
+  <p style="margin-bottom:1rem;">Envision is always the primary brand. Always first. Always dominant. No sub-brand ever leads independently.</p>
+  <p style="margin-bottom:1rem;">Our brand isn't just a name or a logo — it's how we tell our story. A clear, unified brand helps us amplify our mission and make a bigger impact. When we speak as one, we show the world the strength and purpose behind Envision.</p>
+  <p style="margin-bottom:2.5rem;">Everything we do — our programs, services, and products — fits under the Envision umbrella. It's all connected, working together to reflect who we are and what we stand for.</p>
+
+  <h3 style="color:var(--navy);margin-bottom:1.5rem;">The Three-Tier System</h3>
+  <p style="margin-bottom:1.5rem;">Not every program or service needs the same level of visual identity. We use three tiers depending on whether something has a physical presence and how often it needs to be visually distinguished.</p>
+
+  <div class="tier-block">
+    <h3>Tier 1 — Sub-Brand Lock-Ups (Physical Locations Only)</h3>
+    <p style="margin-bottom:1rem;">Sub-brand lock-ups exist only for entities with a physical location — places someone can walk into. These use the Envision master logo with the location name as a text treatment beneath it in Alternate Gothic. They are location identifiers, not independent brands.</p>
+    <p style="font-weight:600;margin-bottom:0.75rem;">Confirmed Tier 1 lock-ups:</p>
+    <ul style="padding-left:1.5rem;margin-bottom:1rem;">
+      <li><strong>Envision Arts Center</strong> — Studio, gallery, and creative community space in Wichita.</li>
+      <li><strong>Envision Base Supply Center</strong> — Retail locations on military installations.</li>
+      <li><strong>Envision Child Development Center</strong> — Campuses in Wichita and Dallas.</li>
+      <li><strong>Envision Vision Rehabilitation Center</strong> — Clinical rehabilitation location(s).</li>
+    </ul>
+    <!-- FLAG: LOGO PLACEHOLDERS - Replace with Tier 1 sub-brand lock-up examples -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1rem;">
+      <div class="logo-placeholder" style="font-size:0.8rem;">Arts Center Lock-Up<br><small>Marketing Hub</small></div>
+      <div class="logo-placeholder" style="font-size:0.8rem;">Base Supply Center Lock-Up<br><small>Marketing Hub</small></div>
+      <div class="logo-placeholder" style="font-size:0.8rem;">Child Dev Center Lock-Up<br><small>Marketing Hub</small></div>
+      <div class="logo-placeholder" style="font-size:0.8rem;">Vision Rehab Center Lock-Up<br><small>Marketing Hub</small></div>
+    </div>
+  </div>
+
+  <div class="tier-block tier-2">
+    <h3>Tier 2 — Micro-Text Identifier (Optional, Contextual)</h3>
+    <p>Programs that occasionally need visual distinction may use a small green micro-text treatment beneath the Envision master logo. This mirrors the Tier 1 treatment but is used sparingly and only when context requires program distinction. It is an option, not a default.</p>
+  </div>
+
+  <div class="tier-block tier-3">
+    <h3>Tier 3 — Text Only (Programs and Services)</h3>
+    <p style="margin-bottom:0.75rem;">Everything else is referenced by program name in text only. Master logo, no additional visual treatment.</p>
+    <ul style="padding-left:1.5rem;">
+      <li>Envision Research Institute</li>
+      <li>Envision Workforce Innovation</li>
+      <li>Envision Mission Services</li>
+      <li>Continuing Education (Grand Rounds, Envision Conference, on-demand courses)</li>
+    </ul>
+  </div>
+
+  <h3 style="color:var(--navy);margin:2.5rem 0 1rem;">Foundation Lock-Ups</h3>
+  <p style="margin-bottom:1rem;">The foundations have their own lock-ups used exclusively for sponsorships, letterhead, and formal donor-facing materials. Envision always leads. Foundation identifiers are used only when the philanthropic entity specifically needs to be distinguished.</p>
+  <ul style="padding-left:1.5rem;margin-bottom:1rem;">
+    <li><strong>Envision's Wichita Foundation</strong></li>
+    <li><strong>Envision's Dallas Foundation</strong></li>
+  </ul>
+  <p style="font-style:italic;color:#555;">Always written with the apostrophe: Envision's Dallas Foundation. Never Envision Dallas Foundation.</p>
+  <!-- FLAG: LOGO PLACEHOLDERS - Replace with Foundation lock-ups -->
+  <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:1rem;max-width:500px;">
+    <div class="logo-placeholder" style="font-size:0.8rem;">Wichita Foundation<br><small>Marketing Hub</small></div>
+    <div class="logo-placeholder" style="font-size:0.8rem;">Dallas Foundation<br><small>Marketing Hub</small></div>
+  </div>
+
+  <h3 style="color:var(--navy);margin:2.5rem 0 1rem;">Retired Marks — Do Not Use</h3>
+  <p style="margin-bottom:1rem;">The following marks are retired as part of the brand refresh. They should not appear in any new materials.</p>
+  <ul class="retired-list">
+    <li><strong>Envision Xpress</strong> — Retired. Now Envision Base Supply Center.</li>
+    <li><strong>Old colorful Envision Arts logo</strong> — Retired. Now Envision Arts Center with master logo.</li>
+    <li><strong>Old ECDC circular logo</strong> — Retired. Now Envision Child Development Center with master logo.</li>
+    <li><strong>All previous independently operating sub-brand logos</strong> — Retired.</li>
+  </ul>
+
+  <h3 style="color:var(--navy);margin:2.5rem 0 1rem;">Brand Nomenclature</h3>
+  <p style="margin-bottom:1rem;">Programs and services that don't have their own logo are always referenced by name alongside the Envision master brand. The sub-brand name appears as text — never as a standalone logo treatment.</p>
+  <p style="margin-bottom:1rem;">For naming units within a sub-brand, always pair with the appropriate sub-brand lock-up. Use approved typography. Never create standalone logos for programs or naming units.</p>
+
+  <h4 style="color:var(--navy);margin:1.5rem 0 0.5rem;">Location Identifiers</h4>
+  <p style="margin-bottom:1rem;">For regional efforts, location identifiers add local context while staying aligned with the master brand. Wichita, as our headquarters, uses the master brand alone. Other locations use text-based identifiers alongside the master brand or sub-brand lock-up.</p>
+  <p style="margin-bottom:1rem;">Do not create separate logos for locations.</p>
+
+  <h4 style="color:var(--navy);margin:1.5rem 0 0.5rem;">Donor Names</h4>
+  <p>Donor names attached to facilities and programs are used only in donor-facing contexts — sponsorships, formal giving materials, and donor communications. In all general-purpose materials, use the short form without the donor name.</p>
+</section>
+
+<!-- SECTION 4: PILLAR PROFILES -->
+<section class="section-full bg-light" id="pillar-profiles">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">Section 4</p>
+      <h2>Pillar Profiles</h2>
+      <div class="section-divider"></div>
+      <p>Envision operates across eight program and service areas. Each has its own audience, tone, and messaging priorities — but all connect back to the master brand and the central idea of Thriving.</p>
+    </div>
+
+    <div class="card-grid">
+
+      <!-- Arts Center -->
+      <div class="card">
+        <h3>Envision Arts Center</h3>
+        <h4>What it does</h4>
+        <p>A studio, gallery, and community space dedicated to creative expression by and for people who are blind or low vision. Currently centered on traditional visual art — exhibitions, community art initiatives, and artist showcases — with a vision that extends to music, dance, and other creative disciplines over time.</p>
+        <h4>Who it serves</h4>
+        <p>Artists who are blind or low vision, community members, donors, arts patrons, educators, and cultural partners.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Expressive</span><span class="tone-tag">Celebratory</span><span class="tone-tag">Community-rooted</span></p>
+        <h4>Lead message</h4>
+        <p>Creative expression belongs to everyone. The Envision Arts Center is where that belief becomes a place.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> An artist whose work is seen, valued, and celebrated. A community built around creative possibility.</div>
+        <h4>Content rule</h4>
+        <p>Never frame arts programming as therapy or rehabilitation. These are artists. Lead with the work and the space, not the diagnosis. Language should be expansive enough to grow with the program.</p>
+      </div>
+
+      <!-- Base Supply Center -->
+      <div class="card">
+        <h3>Envision Base Supply Center</h3>
+        <h4>What it does</h4>
+        <p>Retail locations on military installations serving active duty service members, veterans, and military families. Military-facing merchandise and BSC-specific e-commerce. Operates under AbilityOne contracts — AbilityOne is the contract foundation here, not just a credential.</p>
+        <h4>Who it serves</h4>
+        <p>Active duty service members, veterans, military families, installation leadership, and contracting officers.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Direct</span><span class="tone-tag">Earned</span><span class="tone-tag">No-nonsense</span></p>
+        <h4>Lead message</h4>
+        <p>Quality products, reliable supply, operated by people who understand service. The workforce behind the counter has something in common with the people in front of it.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A service member who gets what they need without friction. A veteran employee who found purpose and income after service.</div>
+        <h4>Content rule</h4>
+        <p>Avoid 'giving back' or 'supporting our troops' framing — it reads as performative to this audience. Lead with operational reliability and shared values. US-based workforce is a strong proof point. Envision Xpress is retired — all materials must reflect Envision Base Supply Center going forward.</p>
+      </div>
+
+      <!-- Child Development Center -->
+      <div class="card">
+        <h3>Envision Child Development Center</h3>
+        <h4>What it does</h4>
+        <p>Early childhood education at two campuses — Wichita and Dallas (1801 Valley View Lane, Farmers Branch, TX). Primary focus is children who are blind or low vision, in an integrated classroom environment where sighted peers learn alongside them.</p>
+        <h4>Who it serves</h4>
+        <p>Parents and caregivers of young children, particularly families navigating early childhood vision loss. Also serves the broader Wichita and Farmers Branch communities through an integrated classroom model.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Warm</span><span class="tone-tag">Community-driven</span><span class="tone-tag">Parent-facing</span></p>
+        <h4>Lead message</h4>
+        <p>Every child is ready to learn. ECDC builds the environment that proves it — state-of-the-art facilities, future-ready curriculum, and deep community roots where kids who are blind or low vision have every opportunity to thrive alongside their peers.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A child who enters kindergarten ready — socially, emotionally, academically. A family that found a community that truly understood what their child needed from the start.</div>
+        <h4>Content rule</h4>
+        <p>The integration model is the differentiator — lead with that. Use 'future-ready' not 'forward-thinking.' Do not use 'all abilities' — overstates scope. Do not use 'difference' in reference to students. Community involvement is a proof point.</p>
+      </div>
+
+      <!-- Commercial Solutions -->
+      <div class="card">
+        <h3>Envision Commercial Solutions</h3>
+        <h4>What it does</h4>
+        <p>Print services, contact center, fulfillment, assembly, products, and e-commerce (Supply Source). Envision's primary commercial revenue engine. Serves enterprise and government buyers across any industry.</p>
+        <p style="margin-top:0.5rem;"><strong>Track 1 — Commercial/Enterprise:</strong> Private sector buyers across any industry. Procurement managers, supply chain leaders, operations and logistics teams, corporate clients. AbilityOne is not relevant here. Capability and certification lead everything.</p>
+        <p style="margin-top:0.5rem;"><strong>Track 2 — Government:</strong> General government contracts where compliance and certification matter. AbilityOne is important but not always the primary contract vehicle. BSC contracts are addressed in the Base Supply Center pillar.</p>
+        <h4>Who it serves</h4>
+        <p>Procurement officers, supply chain managers, contracting officers, GPO decision-makers, and enterprise buyers across industries.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Business-first</span><span class="tone-tag">Capability-led</span><span class="tone-tag">Credibility-forward</span></p>
+        <h4>Lead message</h4>
+        <p>We are a high-performing commercial partner. Capability, compliance, and on-time delivery are the story. Mission is the reason to choose us when capability is equal.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A workforce producing enterprise-grade output. Clients who get what they need, on time, at spec.</div>
+        <h4>Content rule</h4>
+        <p>Lead always with capability, compliance, and proof points. Mission enters only when the contract requires it or the buyer is known to value nonprofit partnerships. Never open with nonprofit or charity framing. The mission follows credibility rule applies here more than anywhere else.</p>
+      </div>
+
+      <!-- Mission Services -->
+      <div class="card">
+        <h3>Envision Mission Services</h3>
+        <h4>What it does</h4>
+        <p>Community-based programs and services supporting BVI individuals across every stage of life — from early childhood through senior years. Programs span recreation, socialization, daily living support, and community connection, including but not limited to Heather's Camp, PRIDE (Adult Day Support), and Adult Support Group.</p>
+        <h4>Who it serves</h4>
+        <p>BVI individuals of all ages and their families, caregivers, social workers, and community partners.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Compassionate</span><span class="tone-tag">Community-centered</span><span class="tone-tag">Dignified</span></p>
+        <h4>Lead message</h4>
+        <p>From the earliest years to the latest ones, Envision Mission Services is there. Whatever the stage, whatever the need — no one navigates this alone.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A person who has community, connection, and support that fits their life at every stage. A family that isn't figuring this out alone.</div>
+        <h4>Content rule</h4>
+        <p>Person-first language is non-negotiable here. No inspiration porn. Stories should center the person's experience and choices — not Envision's role in them. Never enumerate all programs — the scope is too broad. Lead with the continuum, not a checklist.</p>
+      </div>
+
+      <!-- Research Institute -->
+      <div class="card">
+        <h3>Envision Research Institute</h3>
+        <h4>What it does</h4>
+        <p>Research labs and facilities, fellowship programs, and collaborative projects with universities and industry partners. Focused on vision science and innovations that improve quality of life for people who are blind or low vision.</p>
+        <h4>Who it serves</h4>
+        <p>Researchers, fellows, university and industry partners, healthcare and policy audiences, and donors motivated by scientific impact.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Credible</span><span class="tone-tag">Precise</span><span class="tone-tag">Forward-looking</span></p>
+        <h4>Lead message</h4>
+        <p>The future of vision health is being built here. Envision Research Institute turns scientific discovery into real tools, real treatments, and real change for people who are blind or low vision.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A research breakthrough that changes how vision loss is understood or treated. A fellow who goes on to lead the field. A partnership that produces something that didn't exist before.</div>
+        <h4>Content rule</h4>
+        <p>Specificity is credibility here. Name the partnerships, the studies, the outcomes where possible. Vague innovation language undermines trust with this audience more than anywhere else in the brand.</p>
+      </div>
+
+      <!-- Vision Rehabilitation Center -->
+      <div class="card">
+        <h3>Envision Vision Rehabilitation Center</h3>
+        <h4>What it does</h4>
+        <p>A comprehensive vision rehabilitation center offering clinical low vision evaluations, assistive technology training, and independent living skills programs — all designed to support people at every stage of vision loss. Also home to the Everyday Store, which provides adaptive products and tools for daily living.</p>
+        <h4>Who it serves</h4>
+        <p>People who are blind or low vision — newly diagnosed or experiencing progressive vision loss — referring physicians, caregivers, and family members.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Warm</span><span class="tone-tag">Clinically credible</span><span class="tone-tag">Hope-forward</span></p>
+        <h4>Lead message</h4>
+        <p>You don't have to figure this out alone. There are clinical experts, assistive technology specialists, and independence training programs here — all designed around what you actually need to live fully.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A person who moves through the world with confidence, equipped with the right tools and skills. Not overcoming vision loss — building a full life alongside it.</div>
+        <h4>Content rule</h4>
+        <p>Never use 'despite' in relation to vision loss. Never frame services as charity. Center the client's agency. Referring physicians are a key referral source — materials targeting them lead with clinical outcomes and program credibility, not emotional storytelling.</p>
+      </div>
+
+      <!-- Workforce Innovation -->
+      <div class="card">
+        <h3>Envision Workforce Innovation</h3>
+        <h4>What it does</h4>
+        <p>Career development, job readiness, and employment pathways for people who are blind or low vision. Youth programs include Level-Up — a national residential Pre-Employment Transition Services program for ages 14-22 held at Wichita State University. Adult programs include Pathways and the Workforce Readiness Bootcamp, an intensive assistive technology training program that equips adults with the real-world skills needed to find and keep a job.</p>
+        <h4>Who it serves</h4>
+        <p>Youth who are blind or low vision ages 14-22 and their Teachers of the Visually Impaired, parents, and vocational rehabilitation counselors. Adults who are blind or low vision seeking employment or career advancement. Employers, workforce development partners, and vocational rehabilitation referral sources.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Motivating</span><span class="tone-tag">Practical</span><span class="tone-tag">Outcome-focused</span></p>
+        <h4>Lead message</h4>
+        <p>A career isn't just income. It's identity, independence, and momentum. Envision Workforce Innovation builds the path and walks it with you — at every age and every stage.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A young person with direction and the skills to pursue it. An adult who lands a job and keeps it. Employers who come back because the candidates are prepared.</div>
+        <h4>Content rule</h4>
+        <p>Lead with outcomes and proof points, not inspiration. For Level-Up, the primary marketing audience is TVIs and VR counselors — lead with program structure and Pre-ETS compliance. For adult programs, lead with real skills and real outcomes.</p>
+      </div>
+
+      <!-- Continuing Education -->
+      <div class="card">
+        <h3>Continuing Education</h3>
+        <h4>What it does</h4>
+        <p>Grand Rounds, Envision Conference, and on-demand courses. Continuing education for professionals in the vision rehabilitation and blindness services fields. Known internally as Envision University. Externally referenced as Continuing Education.</p>
+        <h4>Who it serves</h4>
+        <p>Vision rehabilitation specialists, occupational therapists, orientation and mobility specialists, low vision clinicians, researchers, and allied health professionals.</p>
+        <h4>Tone</h4>
+        <p><span class="tone-tag">Authoritative</span><span class="tone-tag">Collegial</span><span class="tone-tag">Peer-to-peer</span></p>
+        <h4>Lead message</h4>
+        <p>The field moves forward when practitioners do. Envision brings together the best minds in vision rehabilitation to share what's working, what's new, and what's next.</p>
+        <div class="thriving"><strong>What Thriving looks like here:</strong> A clinician who leaves with tools they use Monday morning. A field that is more connected, more informed, and better equipped.</div>
+        <h4>Content rule</h4>
+        <p>This audience is highly credentialed — write to their level. Lead with content quality, faculty, and networking opportunity. CEU credits are a practical proof point. No standalone logo — appears as Envision master logo with program name as text treatment only.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: AUDIENCE PERSONAS -->
+<section class="section" id="audience-personas">
+  <div class="section-header">
+    <p class="section-label">Section 5</p>
+    <h2>Audience Personas</h2>
+    <div class="section-divider"></div>
+    <p>Every message is an opportunity to help someone thrive. Make it count.</p>
+  </div>
+  <p style="margin-bottom:2rem;">Every audience Envision serves is a key player in the mission to help people thrive. By understanding who they are, what they need, and what drives them, we can craft messaging that inspires action and builds meaningful connections. These personas are audience lenses — types of people who interact with Envision, mapped to the pillars they're most likely to touch. The same person may interact with multiple pillars at different points in their relationship with Envision.</p>
+
+  <div class="persona-grid">
+
+    <div class="persona-card">
+      <h3>Vision Rehabilitation Client</h3>
+      <h4>Who they are</h4>
+      <p>An adult experiencing vision loss — newly diagnosed or facing progressive deterioration — who is actively seeking clinical support and rehabilitation services. Often referred by an ophthalmologist or optometrist. This is frequently the first point of contact with Envision, arriving at a moment of emotional vulnerability and uncertainty about what vision loss means for daily life.</p>
+      <h4>What they need</h4>
+      <p>Clinical credibility, practical tools, and hope grounded in real outcomes. They need to know that losing vision is not losing a life.</p>
+      <h4>Pillars</h4>
+      <p>Envision Vision Rehabilitation Center primarily. Everyday Store, assistive technology training, and Mission Services as their journey continues.</p>
+      <h4>How to reach them</h4>
+      <p>Physician referral is the primary entry point. Warm, credible, outcome-focused materials. Never pity, never charity framing.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> Regaining daily function and confidence. Moving from uncertainty to independence with the right tools and support.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>BVI Adult</h3>
+      <h4>Who they are</h4>
+      <p>An adult who is blind or low vision and has been navigating life with vision loss for some time. They may have been born with a visual impairment or lost their sight earlier in life. They are not in active clinical rehabilitation — they are living, working, and engaging with community on their own terms.</p>
+      <h4>What they need</h4>
+      <p>Community, connection, and programs that meet them where they are. They are not looking to be helped — they are looking to participate.</p>
+      <h4>Pillars</h4>
+      <p>Mission Services primarily. Arts Center, Workforce Innovation, and Continuing Education depending on interests and life stage.</p>
+      <h4>How to reach them</h4>
+      <p>Peer-to-peer channels, community networks, and word of mouth. Tone is direct and respectful. Never patronizing.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A full life on their own terms. Community, purpose, and the freedom to engage with Envision as a participant — not a recipient.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>BVI Youth</h3>
+      <h4>Who they are</h4>
+      <p>A young person who is blind or low vision, ages 14-22, navigating the transition from school to adulthood. They may be the only student with vision loss in their entire school district. They are figuring out who they are, what they want, and what's possible — often without peers who share their experience.</p>
+      <h4>What they need</h4>
+      <p>Connection with peers who get it. Real skills, real career exploration, and a clear picture of what their future can look like. Not inspiration — possibility.</p>
+      <h4>Pillars</h4>
+      <p>Workforce Innovation and Level-Up primarily. Mission Services through Heather's Camp as a younger entry point.</p>
+      <h4>How to reach them</h4>
+      <p>The primary marketing audience for youth programs is TVIs, VR counselors, parents, and educators — not the youth directly. Materials targeting youth should feel peer-level, energetic, and possibility-focused. Never condescending.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A young person who arrives at adulthood with direction, skills, confidence, and a network of peers who understand their experience.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Family Member or Caregiver</h3>
+      <h4>Who they are</h4>
+      <p>A parent, spouse, adult child, or close family member navigating vision loss alongside someone they love. They are often doing the research, making the calls, and managing the logistics while also managing their own fear and uncertainty.</p>
+      <h4>What they need</h4>
+      <p>Clarity, reassurance, and practical guidance. They need to understand what's available, what to expect, and how to support their person without taking over. They are not the client — but they are often the decision-maker.</p>
+      <h4>Pillars</h4>
+      <p>Envision Vision Rehabilitation Center, ECDC, Mission Services, and Workforce Innovation depending on who they are supporting and at what life stage.</p>
+      <h4>How to reach them</h4>
+      <p>Physician referral, school and TVI networks, and community word of mouth. Tone is warm, practical, and empowering — never alarmist.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> Confidence that their person is supported, equipped, and not alone. The knowledge that they don't have to figure this out by themselves either.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Referring Professional</h3>
+      <h4>Who they are</h4>
+      <p>A credentialed professional whose role connects people with vision loss to Envision's programs and services. Includes Teachers of the Visually Impaired (TVIs), vocational rehabilitation counselors, ophthalmologists, optometrists, occupational therapists, and social workers.</p>
+      <h4>What they need</h4>
+      <p>Confidence that Envision will deliver. Clinical credibility, clear program documentation, outcome data, and materials that make the referral process easy.</p>
+      <h4>Pillars</h4>
+      <p>Vision Rehabilitation Center, Workforce Innovation, ECDC, and Mission Services depending on professional focus.</p>
+      <h4>How to reach them</h4>
+      <p>Professional networks, state AER chapters, TVI listservs, continuing education events, and peer referral. Tone is collegial and outcomes-focused. Write to their credential level.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A client who gets the right support at the right time. A referral process that is straightforward and well-documented.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Continuing Education Professional</h3>
+      <h4>Who they are</h4>
+      <p>A credentialed professional in the vision rehabilitation or blindness services field seeking ongoing professional development. Includes TVIs, orientation and mobility specialists, occupational therapists, low vision clinicians, and researchers. They engage with Envision as a peer and thought leader.</p>
+      <h4>What they need</h4>
+      <p>High-quality, relevant continuing education that advances their practice. CEU credits, access to emerging research, and connection with peers across the field.</p>
+      <h4>Pillars</h4>
+      <p>Continuing Education primarily. Research Institute as interests intersect with applied vision science.</p>
+      <h4>How to reach them</h4>
+      <p>Professional associations, conference networks, peer referral, and direct outreach through TVI and rehabilitation listservs. Tone is authoritative and collegial.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A field that is more connected, better informed, and more equipped to serve people who are blind or low vision.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Enterprise Buyer</h3>
+      <h4>Who they are</h4>
+      <p>A procurement officer, supply chain manager, operations leader, or contracting officer evaluating Envision as a commercial partner for print, fulfillment, contact center, assembly, or products. Not motivated by mission — motivated by performance, compliance, and reliability.</p>
+      <h4>What they need</h4>
+      <p>Proof that Envision can deliver. On-time, at spec, at scale. Certifications, compliance documentation, capability demonstrations, and references.</p>
+      <h4>Pillars</h4>
+      <p>Commercial Solutions primarily across both commercial and government tracks.</p>
+      <h4>How to reach them</h4>
+      <p>Direct sales outreach, industry events, vendor networks, and RFP processes. Tone is professional, capability-led, and credibility-forward. Never lead with nonprofit framing.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A vendor relationship that performs consistently, reduces friction, and delivers on every commitment.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Military Community</h3>
+      <h4>Who they are</h4>
+      <p>Active duty service members, veterans, military spouses, and military families who shop at Envision Base Supply Centers. Also includes installation leadership and contracting officers who oversee BSC operations and AbilityOne compliance.</p>
+      <h4>What they need</h4>
+      <p>Reliable products, a well-run store, and a supply chain that doesn't let them down. Contracting officers additionally need compliance documentation and AbilityOne credentials.</p>
+      <h4>Pillars</h4>
+      <p>Envision Base Supply Center primarily. Commercial Solutions for contracting officers.</p>
+      <h4>How to reach them</h4>
+      <p>On-installation presence, installation leadership relationships, and military community networks. Tone is direct, respectful, and no-nonsense. Shared values over sentimentality.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A Base Supply Center that runs smoothly, stocks what they need, and operates with the professionalism the military community expects.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Arts Community</h3>
+      <h4>Who they are</h4>
+      <p>Artists who are blind or low vision, arts patrons, educators, cultural partners, and community members who engage with the Envision Arts Center. Some are creators. Some are supporters. All are drawn by the belief that creative expression belongs to everyone.</p>
+      <h4>What they need</h4>
+      <p>A space that takes the work seriously. Programming that is high quality, welcoming, and expansive. Not a charity art show — a genuine creative community with real artists making real work.</p>
+      <h4>Pillars</h4>
+      <p>Envision Arts Center primarily. Mission Services and Donor/Community Partner depending on engagement level.</p>
+      <h4>How to reach them</h4>
+      <p>Local arts networks, community events, social media, and word of mouth. Tone is expressive, celebratory, and community-rooted. Never clinical or institutional.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> An artist whose work is seen, valued, and celebrated. A community that experiences creative possibility without limitation.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Research and Academic Community</h3>
+      <h4>Who they are</h4>
+      <p>Researchers, university faculty, fellows, industry partners, and clinicians who engage with Envision Research Institute. Motivated by discovery, scientific rigor, and the application of research to real-world outcomes. They engage with Envision as a peer institution.</p>
+      <h4>What they need</h4>
+      <p>A credible, well-resourced research environment. Access to facilities, data, fellowship opportunities, and collaborative partnerships that advance the field.</p>
+      <h4>Pillars</h4>
+      <p>Envision Research Institute primarily. Continuing Education and Vision Rehabilitation Center as work intersects with clinical application.</p>
+      <h4>How to reach them</h4>
+      <p>Academic conferences, peer-reviewed publications, university partnerships, and professional networks. Tone is precise, credible, and collegial.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A breakthrough that changes how vision loss is understood or treated. A fellowship that launches a career. A partnership that produces something that didn't exist before.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Donor or Community Partner</h3>
+      <h4>Who they are</h4>
+      <p>Individual givers, major donors, foundations, corporate partners, and community organizations who invest in Envision's mission financially or through partnership. Motivated by impact — they want to know their investment is making a real difference in real lives.</p>
+      <h4>What they need</h4>
+      <p>Proof of impact. Inspiring stories of independence and transformation. Quantified outcomes where possible. A relationship that feels personal and reciprocal.</p>
+      <h4>Pillars</h4>
+      <p>Foundations primarily for philanthropic giving. Any pillar depending on area of interest.</p>
+      <h4>How to reach them</h4>
+      <p>Donor events, foundation relationships, personal outreach, annual reports, and impact communications. Tone is grateful, impact-driven, and relationship-focused. Lead with stories, back them with outcomes.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> Knowing their investment created something real. A relationship with Envision that deepens over time.</div>
+    </div>
+
+    <div class="persona-card">
+      <h3>Envision Employee or Job Seeker</h3>
+      <h4>Who they are</h4>
+      <p>Someone who works at Envision or is actively seeking employment there. Includes people who are blind or low vision working in manufacturing, contact center, or other roles, as well as sighted employees across all departments. Also includes BVI individuals pursuing employment through Envision's mission and general candidates applying for open positions.</p>
+      <h4>What they need</h4>
+      <p>A workplace that values their contribution, invests in their growth, and lives its mission from the inside out.</p>
+      <h4>Pillars</h4>
+      <p>All pillars depending on role. Commercial Solutions and Base Supply Centers for manufacturing and retail employees. Mission Services and Workforce Innovation for BVI employees hired through the mission pipeline.</p>
+      <h4>How to reach them</h4>
+      <p>Job listings, employee referral, workforce development partnerships, and internal communications. Tone is motivating, mission-connected, and respectful.</p>
+      <div class="thriving"><strong>What Thriving looks like:</strong> A career that grows. A workplace that sees them fully. The knowledge that their work — whatever their role — contributes to something that matters.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 6: BRAND VOICE -->
+<section class="section-full bg-navy" id="brand-voice">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">Section 6</p>
+      <h2>Brand Voice</h2>
+      <div class="section-divider"></div>
+      <p>How We Speak</p>
+    </div>
+
+    <p style="margin-bottom:1rem;">Think of Envision's voice as a knowledgeable guide — not a cheerleader. We are experts who uplift, guide, and empower people to thrive. Clear, human, and concise. Confident but warm, always focused on outcomes.</p>
+    <p style="margin-bottom:2.5rem;">Our voice is not a single setting. It shifts depending on who we're speaking to and which part of Envision is doing the speaking. What never changes is our commitment to language that includes, uplifts, and centers the people we serve.</p>
+
+    <div class="voice-grid">
+      <div class="voice-is" style="background:rgba(120,190,33,0.15);border-color:rgba(120,190,33,0.3);">
+        <h3 style="margin-bottom:1rem;">Our Voice Is</h3>
+        <ul style="list-style:none;padding:0;">
+          <li style="margin-bottom:0.75rem;"><strong>Confident</strong> — We speak with clarity and credibility. We know our work and back it up with real stories and real results.</li>
+          <li style="margin-bottom:0.75rem;"><strong>Purposeful</strong> — Everything we say ties back to our mission. We're not just good — we're effective.</li>
+          <li><strong>Grounded</strong> — We meet people where they are. No jargon. Genuine conversations.</li>
+        </ul>
+      </div>
+      <div class="voice-not" style="background:rgba(181,85,85,0.1);border-color:rgba(181,85,85,0.2);">
+        <h3 style="color:#f88;margin-bottom:1rem;">Our Voice Is Not</h3>
+        <ul style="list-style:none;padding:0;">
+          <li style="margin-bottom:0.75rem;">Gloomy, divisive, or arrogant.</li>
+          <li style="margin-bottom:0.75rem;">Jargon-heavy or self-centered.</li>
+          <li style="margin-bottom:0.75rem;">Paternalistic — we do not 'make people thrive.' People thrive. We enable it.</li>
+          <li>Vague — claims should be measurable where possible.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin:2.5rem 0 1rem;">The Mission and Credibility Rule</h3>
+    <p style="margin-bottom:1rem;font-size:1.1rem;font-weight:600;color:var(--green);">Mission follows credibility.</p>
+    <p style="margin-bottom:1rem;">Establish that Envision can do the work. Then mission becomes the reason to choose Envision over an equally capable partner.</p>
+    <p style="margin-bottom:1rem;">Envision is mission-driven and commercially competitive. In commercial contexts, lead with capability, compliance, and proof points. Mission enters only when the contract requires it or the buyer is known to value nonprofit partnerships. Never open with nonprofit or charity framing in a commercial sales context.</p>
+    <p style="margin-bottom:2.5rem;">In mission-driven contexts, lead with the person's experience and agency. Envision's role is enabling — not rescuing.</p>
+
+    <h3 style="margin-bottom:1rem;">Language Rules</h3>
+    <ul style="padding-left:1.5rem;margin-bottom:2rem;">
+      <li style="margin-bottom:0.5rem;">Person-first language always. On first mention: people who are blind or low vision (BVI). BVI is acceptable after that.</li>
+      <li style="margin-bottom:0.5rem;">No deficit language. Never 'suffers,' 'victim,' 'afflicted,' or 'wheelchair-bound.'</li>
+      <li style="margin-bottom:0.5rem;">Use 'sighted' or 'typical vision' — not 'normal.'</li>
+      <li style="margin-bottom:0.5rem;">Use 'guide dog' — not 'seeing eye dog.'</li>
+      <li style="margin-bottom:0.5rem;">Never 'despite vision loss' — reframe around capability, not contrast.</li>
+      <li style="margin-bottom:0.5rem;">Center the person's agency. People thrive. Organizations and tools enable.</li>
+      <li style="margin-bottom:0.5rem;">No sight-based idioms in BVI-facing content. Prefer 'experience,' 'understand,' and 'find' over 'see,' 'look,' and 'watch.'</li>
+      <li style="margin-bottom:0.5rem;">No em dashes.</li>
+      <li style="margin-bottom:0.5rem;">No AI-sounding phrasing.</li>
+      <li style="margin-bottom:0.5rem;">Sentence case always — except where brand standards specifically require otherwise.</li>
+      <li style="margin-bottom:0.5rem;">Keep claims measurable where possible — stats, outcomes, proof points.</li>
+      <li>Donor names are used only in donor-facing contexts. Drop donor names in all general materials.</li>
+    </ul>
+
+    <h3 style="margin-bottom:1rem;">Word Swaps</h3>
+    <table class="swap-table" style="background:rgba(255,255,255,0.05);">
+      <thead>
+        <tr><th>Instead of</th><th>Use</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="avoid">'assist'</td><td class="prefer">'help,' 'support,' or 'partner' (choose by context)</td></tr>
+        <tr><td class="avoid">'provide accommodations'</td><td class="prefer">'design with access from the start'</td></tr>
+        <tr><td class="avoid">'return to a normal life'</td><td class="prefer">'return to daily routines / independence'</td></tr>
+        <tr><td class="avoid">'suffers from vision loss'</td><td class="prefer">'lives with vision loss'</td></tr>
+        <tr><td class="avoid">'the blind'</td><td class="prefer">'people who are blind or low vision'</td></tr>
+        <tr><td class="avoid">'normal vision'</td><td class="prefer">'sighted / typical vision'</td></tr>
+        <tr><td class="avoid">'seeing eye dog'</td><td class="prefer">'guide dog'</td></tr>
+        <tr><td class="avoid">'optimize'</td><td class="prefer">'improve'</td></tr>
+        <tr><td class="avoid">'initiate'</td><td class="prefer">'start'</td></tr>
+        <tr><td class="avoid">'despite vision loss'</td><td class="prefer">'with the right tools and support'</td></tr>
+      </tbody>
+    </table>
+
+    <div class="lang-examples" style="margin-top:2rem;">
+      <div class="lang-good" style="background:rgba(120,190,33,0.12);border-color:rgba(120,190,33,0.25);">
+        <h4 style="color:var(--green);margin-bottom:0.75rem;">Good Language Examples</h4>
+        <ul style="padding-left:1.2rem;">
+          <li>'Tools to thrive at work'</li>
+          <li>'Accessibility, built in'</li>
+          <li>'On-time delivery, built-in access'</li>
+          <li>'Training that turns into jobs'</li>
+          <li>'It didn't give me a job. It gave me the skills to go get a job.'</li>
+        </ul>
+      </div>
+      <div class="lang-avoid" style="background:rgba(181,85,85,0.08);border-color:rgba(181,85,85,0.2);">
+        <h4 style="color:#f88;margin-bottom:0.75rem;">Language to Avoid</h4>
+        <ul style="padding-left:1.2rem;">
+          <li>'We make people thrive' — paternalistic</li>
+          <li>'Optimized solutions for independence' — jargon</li>
+          <li>'Despite vision loss, they thrive' — deficit framing</li>
+          <li>'We give jobs to the blind' — objectifying</li>
+          <li>'We give back to the community' — performative</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin:2.5rem 0 1rem;">Tone by Context</h3>
+    <p style="margin-bottom:1.5rem;">Voice shifts depending on which pillar is speaking and who the audience is. For full tone guidance see each pillar profile in Section 4.</p>
+    <div class="values-grid" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr));">
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Arts Center</strong><br>Expressive, celebratory, community-rooted. Lead with the work, not the diagnosis.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Base Supply Center</strong><br>Direct, earned, no-nonsense. Operational reliability and shared values. Never performative.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Child Development Center</strong><br>Warm, parent-facing, community-driven. Future-ready and outcome-grounded.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Commercial Solutions</strong><br>Business-first, capability-led, credibility-forward. Mission is background unless context requires it.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Mission Services</strong><br>Compassionate, dignified, community-centered. Never pitying.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Research Institute</strong><br>Precise, credible, forward-looking. Specificity is credibility.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Vision Rehabilitation Center</strong><br>Warm with clinical credibility. Hope-forward, grounded in real outcomes.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Envision Workforce Innovation</strong><br>Motivating, practical, outcome-focused. Coaching not cheerleading.</div>
+      <div class="value-item" style="background:rgba(255,255,255,0.06);border-left-color:var(--green);"><strong>Continuing Education</strong><br>Authoritative and collegial. Write to the credential level of the audience.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 7: BRAND IN ACTION -->
+<section class="section-full bg-light" id="brand-in-action">
+  <div class="section-inner">
+    <div class="section-header">
+      <p class="section-label">Section 7</p>
+      <h2>Brand in Action</h2>
+      <div class="section-divider"></div>
+      <p>We focus on ability, progress, and independence. It's about what people can do, not what they can't.</p>
+    </div>
+
+    <h3 style="color:var(--navy);margin-bottom:1.5rem;">Universal Voice Examples</h3>
+    <div class="ba-grid">
+      <div>
+        <p class="ba-context">Access and Accommodation</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>We provide accommodations to assist the blind.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>We make access standard for people who are blind or low vision.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Services</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Utilize our services for improved independence.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Use our tools and training to live independently.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Contact</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Contact us for assistance.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>How can we help?</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Research</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Our research endeavors support innovation.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Our research turns ideas into tools people can use.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Employment</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>We give jobs to the blind.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>We create career paths — and paychecks.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Framing</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Despite vision loss, they thrive.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>With the right tools, people thrive.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="color:var(--navy);margin:3rem 0 1.5rem;">Voice by Pillar</h3>
+    <div class="ba-grid">
+      <div>
+        <p class="ba-context">Commercial Solutions</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Envision is a nonprofit organization that provides meaningful employment to people who are blind or visually impaired through our print and fulfillment services.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Envision Print Services delivers enterprise-grade print, fulfillment, and assembly solutions — HIPAA compliant, on time, and built to spec. Our workforce is proven. Our capabilities are scalable. Let's talk about what we can do for your operation.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Vision Rehabilitation Center</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Despite losing most of her vision, Maria didn't give up. Thanks to Envision, she was able to get her life back.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Maria didn't know what was possible after her diagnosis. After working with the Envision Vision Rehabilitation Center — through low vision evaluations, assistive technology training, and independent living skills programs — she had the tools to move forward on her own terms.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Arts Center</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Envision's art program gives blind and visually impaired individuals a creative outlet and therapeutic activity to help them cope with vision loss.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>The Envision Arts Center is where artists who are blind or low vision make, show, and sell their work. No qualifier needed. Just art — and the community that surrounds it.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Base Supply Center</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>By shopping at our Base Supply Centers, you're giving back to the blind and visually impaired community and supporting our troops.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Envision Base Supply Centers operate on installations across the country — stocked, staffed, and ready. Quality products, reliable supply, and a workforce that understands what service means.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Child Development Center</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>ECDC welcomes children of all abilities in an inclusive environment where every child is accepted.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>At Envision Child Development Center, kids who are blind or low vision learn alongside their sighted peers from day one. State-of-the-art facilities, future-ready curriculum, and a community built for every child to thrive.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Mission Services</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Envision provides critical services to the blind and visually impaired community, helping those who suffer from vision loss live better lives.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>From Heather's Camp to adult day support and beyond — Envision Mission Services is there at every stage. Whatever the need, whatever the moment, no one navigates this alone.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Research Institute</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Envision is committed to innovative research that helps the visually impaired community.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Envision Research Institute partners with universities and industry leaders to turn vision science into tools people actually use. The work is specific, the outcomes are measurable, and the impact is real.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Envision Workforce Innovation</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Envision helps blind and visually impaired individuals find jobs and become productive members of society.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Envision Workforce Innovation builds career-ready skills — assistive technology training, job readiness, and hands-on career exploration — so people who are blind or low vision can compete, get hired, and grow. Training that turns into jobs.</p></div>
+        </div>
+      </div>
+      <div>
+        <p class="ba-context">Continuing Education</p>
+        <div class="ba-row">
+          <div class="ba-before"><span class="ba-label">Before</span><p>Envision offers continuing education opportunities for professionals in the blindness field.</p></div>
+          <div class="ba-after"><span class="ba-label">After</span><p>Grand Rounds. The Envision Conference. On-demand courses built for practitioners. Envision brings the field together — so clinicians, educators, and researchers leave with tools they use Monday morning.</p></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SECTION 8: CONTACT -->
+<footer class="footer" id="contact">
+  <div class="section-header">
+    <p class="section-label" style="color:var(--green);">Section 8</p>
+    <h2>Contact</h2>
+    <div class="section-divider"></div>
+  </div>
+  <p style="font-size:1.1rem;margin-bottom:0.5rem;">For questions or approvals, contact our Brand Team at <a href="mailto:brand@envision.org">brand@envision.org</a>.</p>
+  <p style="font-size:1.15rem;font-weight:600;color:var(--green);margin:1.5rem 0;">This is just the beginning of Envision's story. Let's write the next chapter together.</p>
+  <div class="addresses">
+    <p>ENVISION, INC.</p>
+    <p>610 N. Main Street, Wichita, KS 67203</p>
+    <p>1801 Valley View Lane, Farmers Branch, TX 75234</p>
+    <p style="margin-top:0.75rem;"><a href="https://envisionus.com" target="_blank" rel="noopener">envisionus.com</a></p>
+  </div>
+</footer>
+
+<script>
+// Close mobile nav on link click
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.querySelector('.nav-links').classList.remove('open');
+  });
+});
+
+// Active nav highlight on scroll
+const sections = document.querySelectorAll('section[id], footer[id], header[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 100;
+    if (pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.style.background = '';
+    if (link.getAttribute('href') === '#' + current) {
+      link.style.background = 'rgba(255,255,255,0.12)';
+    }
+  });
+});
+</script>
+</body>
+</html>
