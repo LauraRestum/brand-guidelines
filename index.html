@@ -174,6 +174,7 @@ h4 { font-weight: 600; font-size: 1.15rem; }
   padding: 1.25rem; border-left: 3px solid var(--green);
 }
 .value-item strong { color: var(--navy); }
+.bg-navy .value-item strong { color: var(--green); }
 
 /* COLOR SWATCHES */
 .color-grid {
@@ -246,15 +247,6 @@ h4 { font-weight: 600; font-size: 1.15rem; }
 .lang-avoid h4 { color: #b55; }
 .lang-good li, .lang-avoid li { font-size: 0.9rem; margin: 0.4rem 0; }
 
-/* CONTACT / FOOTER */
-.footer {
-  background: var(--navy); color: var(--white);
-  text-align: center; padding: 5rem 2rem;
-}
-.footer h2 { color: var(--white); margin-bottom: 1rem; }
-.footer p { opacity: 0.85; max-width: 600px; margin: 0.5rem auto; }
-.footer a { color: var(--green); text-decoration: none; font-weight: 600; }
-.footer .addresses { margin: 2rem 0; font-size: 0.9rem; opacity: 0.7; }
 
 /* DIVIDERS */
 .section-divider {
@@ -327,7 +319,6 @@ h4 { font-weight: 600; font-size: 1.15rem; }
     <li><a href="#audience-personas">Personas</a></li>
     <li><a href="#brand-voice">Voice</a></li>
     <li><a href="#brand-in-action">In Action</a></li>
-    <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
 
@@ -1223,22 +1214,6 @@ h4 { font-weight: 600; font-size: 1.15rem; }
   </div>
 </section>
 
-<!-- SECTION 8: CONTACT -->
-<footer class="footer" id="contact">
-  <div class="section-header">
-    <p class="section-label" style="color:var(--green);">Section 8</p>
-    <h2>Contact</h2>
-    <div class="section-divider"></div>
-  </div>
-  <p style="font-size:1.1rem;margin-bottom:0.5rem;">For questions or approvals, contact our Brand Team at <a href="mailto:brand@envision.org">brand@envision.org</a>.</p>
-  <p style="font-size:1.15rem;font-weight:600;color:var(--green);margin:1.5rem 0;">This is just the beginning of Envision's story. Let's write the next chapter together.</p>
-  <div class="addresses">
-    <p>ENVISION, INC.</p>
-    <p>610 N. Main Street, Wichita, KS 67203</p>
-    <p>1801 Valley View Lane, Farmers Branch, TX 75234</p>
-    <p style="margin-top:0.75rem;"><a href="https://envisionus.com" target="_blank" rel="noopener">envisionus.com</a></p>
-  </div>
-</footer>
 
 <script>
 // Close mobile nav on link click
@@ -1249,7 +1224,7 @@ document.querySelectorAll('.nav-links a').forEach(link => {
 });
 
 // Active nav highlight on scroll
-const sections = document.querySelectorAll('section[id], footer[id], header[id]');
+const sections = document.querySelectorAll('section[id], header[id]');
 const navLinks = document.querySelectorAll('.nav-links a');
 window.addEventListener('scroll', () => {
   let current = '';
